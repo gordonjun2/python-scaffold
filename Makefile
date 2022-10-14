@@ -5,6 +5,10 @@ install:
 install-azure:
 	pip install --upgrade pip &&\
 		pip install -r requirements-azure.txt
+
+install-gcp:
+	pip install --upgrade pip &&\
+		pip install -r requirements-gcp.txt
 		
 format:
 	black *.py
@@ -18,3 +22,5 @@ test:
 all: install lint test format
 
 all-azure: install-azure lint test format
+
+all-gcp: install-gcp lint test format
